@@ -261,6 +261,7 @@ import { saveAs } from "file-saver";
 import { createEvent, type EventAttributes } from "ics";
 import type { CountdownEvent } from "@/stores/types";
 import { getDiffDays, getTargetDate, formatTimeDiff } from "@/utils/date";
+import { useBackNavigation } from "@/composables/useBackNavigation";
 
 const store = useAppStore();
 const { t } = useI18n();
@@ -277,6 +278,12 @@ const detailDialog = ref(false);
 const confirmDelete = ref(false);
 const showQuickActions = ref(false);
 const selectedEvent = ref<CountdownEvent | null>(null);
+
+useBackNavigation(showAddForm);
+useBackNavigation(showEditForm);
+useBackNavigation(detailDialog);
+useBackNavigation(confirmDelete);
+useBackNavigation(showQuickActions);
 
 onMounted(() => {
   store.init();

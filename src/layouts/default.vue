@@ -24,7 +24,10 @@
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 import SettingsView from "@/components/SettingsView.vue";
+import { useBackNavigation } from "@/composables/useBackNavigation";
 
 const { t } = useI18n();
 const showSettings = ref(false);
+
+useBackNavigation(showSettings);
 </script>
