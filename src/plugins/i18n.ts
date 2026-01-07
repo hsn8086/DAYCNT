@@ -3,7 +3,11 @@ import { createI18n } from 'vue-i18n'
 const messages = {
     zh: {
         app: {
-            title: '倒数日',
+            sort: {
+                createAt: '创建时间',
+                date: '事件日期',
+            },
+            title: 'DAYCNT',
             add: '添加事件',
             search: '搜索',
             settings: '设置',
@@ -53,7 +57,11 @@ const messages = {
     },
     en: {
         app: {
-            title: 'Day Counter',
+            sort: {
+                createAt: 'Create At',
+                date: 'Event Date',
+            },
+            title: 'DAYCNT',
             add: 'Add Event',
             search: 'Search',
             settings: 'Settings',
