@@ -42,7 +42,7 @@
                   ><v-icon size="small">mdi-calendar</v-icon></template
                 >
                 <v-list-item-title class="ml-2">{{
-                  t("event.date")
+                  t("app.sort.date")
                 }}</v-list-item-title>
               </v-list-item>
               <v-list-item
@@ -50,10 +50,10 @@
                 :active="sortBy === 'createdAt'"
               >
                 <template v-slot:prepend
-                  ><v-icon size="small">mdi-plus-clock</v-icon></template
+                  ><v-icon size="small">mdi-clock</v-icon></template
                 >
                 <v-list-item-title class="ml-2">{{
-                  t("app.add")
+                  t("app.sort.createAt")
                 }}</v-list-item-title>
               </v-list-item>
             </v-list>
