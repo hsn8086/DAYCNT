@@ -29,6 +29,11 @@
 
       <div class="d-flex flex-column align-center">
         <div class="d-flex align-baseline">
+          <span
+            class="text-caption font-weight-medium ml-1"
+            v-if="store.settings.displayFormat === 'days'"
+            >{{ diffDays >= 0 ? t("event.left") : t("event.passed") }}</span
+          >
           <span class="text-h3 font-weight-bold">{{ timeDisplay }}</span>
           <span
             class="text-caption font-weight-medium ml-1"
@@ -37,7 +42,6 @@
           >
         </div>
         <div class="text-caption opacity-70 mt-1">
-          {{ diffDays >= 0 ? t("event.left") : t("event.passed") }} ·
           {{ formattedDate }}
         </div>
       </div>

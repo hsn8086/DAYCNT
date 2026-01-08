@@ -155,9 +155,9 @@
               class="content-z py-10 px-6 text-center"
               :class="{ 'text-white': !!selectedEvent.background }"
             >
-              <div class="text-overline mb-2 opacity-70 tracking-widest">
+              <!-- <div class="text-overline mb-2 opacity-70 tracking-widest">
                 {{ t("event.detail").toUpperCase() }}
-              </div>
+              </div> -->
               <div class="text-h4 font-weight-bold mb-6">
                 {{ selectedEvent.title }}
               </div>
